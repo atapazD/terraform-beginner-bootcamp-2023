@@ -256,3 +256,5 @@ Provide the following code in that file:
     }
 }
 ```
+
+Automated the process using a workaround using the following bash script [bin/generate_tfrc/credentials](bin/generate_tfrc_credentials).
