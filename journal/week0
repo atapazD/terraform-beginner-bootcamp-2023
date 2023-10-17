@@ -2,8 +2,6 @@
 
 
 ## Table of Contents
-<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
-
 - [Terraform Beginner Bootcamp 2023](#terraform-beginner-bootcamp-2023)
    * [Semantic Versioning :mage:](#semantic-versioning-mage)
    * [Install the Terraform CLI](#install-the-terraform-cli)
@@ -33,10 +31,6 @@
       + [Terraform Directory](#terraform-directory)
    * [Issues with Terraform Cloud Login and Gitpod Workspace](#issues-with-terraform-cloud-login-and-gitpod-workspace)
       + [Manual token creation](#manual-token-creation)
-
-<!-- TOC end -->
-
-<!-- TOC --><a name="terraform-beginner-bootcamp-2023"></a>
 
 ## Semantic Versioning :mage:
 
