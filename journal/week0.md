@@ -84,7 +84,7 @@ This bash script is located here: [./bin/install_terraform_cli](./bin/install_te
 - This will allow better portability for other projects that need to install Terraform CLI
 
 
-### Shebang
+### Shebang Considerations
 
 A Shebang (pronounced Sha-bang) tells the bash script what program that will interpret the script. eg. `#!/bin/bash`
 
@@ -118,7 +118,7 @@ chmod 744 ./bin/install_terrafrom_cli
 ```
 https://en.wikipedia.org/wiki/chmod
 
-### Github Lifecycle (Before, Init, Command)
+### Gitpod Lifecycle
 
 We need to be careful when using the Init because it will not rerun if we restart an exiting workspace.
 
