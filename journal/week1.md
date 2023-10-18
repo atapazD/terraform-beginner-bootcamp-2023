@@ -73,3 +73,40 @@ If someone deletes or modifies cloud resource manually throu clickops.
 
 If we run Terraform plan attempting to put our infrastrucutre back in to the expected state fixing configuration drift.
 
+## Fix using Terraform Refresh
+
+```sh
+terraform apply -refresh-only --auto-approve
+```
+
+## Terraform Modules
+
+### Terrafrom Module Structure
+
+It is reccomended to place modules in a `modules` directory when locally developing modules but you can name it whatever you like.
+
+### Passing Input Variables
+
+We can pass input variables to our module.
+The module has to declare the terraform variables in its own variables.tf
+
+```tf
+module "terrahouse_aws"{
+  source = "./modules/terrahouse_aws"
+  user_uuid = var.user_uuid
+  bucket_name = var.bucket_name
+}
+```
+### Modules Sources
+
+Using the source we can import the module from various places such as:
+    - locally
+    - Gihub
+    -Terraform Reigstry
+```tf
+module "terrahouse_aws"{
+  source = "./modules/terrahouse_aws"
+}
+```
+
+[Modules Sources](https://developer.hashicorp.com/terraform/language/modules/)
