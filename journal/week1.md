@@ -170,3 +170,39 @@ resource "aws_s3_object" "index_html" {
   etag = filemd5(var.index_html_filepath)
 }
 ```
+
+### Terraform Locals
+```tf
+locals {
+    s3_origin_id = "MyS3Origin"
+}
+
+```
+
+Local values can be helpful to avoid repeating the same values or expressions multiple times in a configuration, but if overused they can also make a configuration hard to read by future maintainers by hiding the actual values used.
+
+The ability to easily change the value in a central place is the key advantage of local values.
+
+[Locals Value](https://developer.hashicorp.com/terraform/language/values/locals)
+
+### Terraform Data Sources
+
+This allows to source data from cloud resources. Usfeul when we want to reference cloud resources without importing them
+
+```tf
+data "aws_caller_identity" "current" {}
+
+output "account_id" {
+  value = data.aws_caller_identity.current.account_id
+}
+```
+[Data Sources](https://developer.hashicorp.com/terraform/language/data-sources)
+
+## Working with JSON
+We use the jsonencode to create the json policy inline in the hcl.
+```js
+> jsonencode({"hello"="world"})
+{"hello":"world"}
+
+```
+[jsonencode](https://developer.hashicorp.com/terraform/language/functions/jsonencode)
