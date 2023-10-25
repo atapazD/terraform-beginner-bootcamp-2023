@@ -12,6 +12,11 @@ tasks:
       source ./bin/install_aws_cli
       source ./bin/set_tf_alias
       source ./bin/generate_tfrc_credentials
+  - name: http-server
+    before: |
+      npm install --global http-server
+    command:
+      http-server
 vscode:
   extensions:
     - amazonwebservices.aws-toolkit-vscode

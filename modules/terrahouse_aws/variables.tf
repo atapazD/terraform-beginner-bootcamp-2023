@@ -49,3 +49,8 @@ variable "content_version" {
     error_message = "Invalid content version. Please provide a positive integer starting at 1."
   }
 }
+
+variable "assets_path" {
+  description = "path to assets folder"
+  type = string
+}
