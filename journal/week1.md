@@ -283,3 +283,15 @@ resource "aws_instance" "web" {
 }
 
 ```
+
+## For each Expressions
+
+For each allows us to enumberate over complex data types.
+
+```sh
+[for s in var.list: upper(s)]
+```
+This is mostly useful when you are creating mutlipes of a cloud resource and you want to reduce the amount of repetitive terrafrom code.
+
+[For Each Expressions](https://developer.hashicorp.com/terraform/language/meta-arguments/for_each)
+
