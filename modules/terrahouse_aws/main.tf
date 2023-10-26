@@ -1,10 +1,10 @@
 terraform {
-#  cloud {
-#    organization = "CloudResumeDZ"
-#    workspaces {
-#      name = "terra-house-1"
-#    }
-# }
+  cloud {
+    organization = "CloudResumeDZ"
+    workspaces {
+      name = "terraform-cloud"
+    }
+ }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
