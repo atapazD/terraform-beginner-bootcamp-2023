@@ -8,3 +8,4 @@ provider "local.providers/local/terratowns" {
     "h1:ii8cEKiiq7HMprGFqrjCtmPo+t5ZfCTbFwEI/dVNvzs=",
   ]
 }
+
