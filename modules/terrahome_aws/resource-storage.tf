@@ -78,14 +78,13 @@ resource "terraform_data" "content_version" {
 }
 
 resource "aws_s3_object" "upload_assets" {
-  for_each = fileset("${var.public_path}+/assets","*.{jpg,png,gif}")
+  for_each = fileset("${var.public_path}/assets","*.{jpg,png,gif}")
   bucket = aws_s3_bucket.website_bucket.bucket
-  key = "assets/${each.key}"
+  key    = "assets/${each.key}"
   source = "${var.public_path}/assets/${each.key}"
-
   etag = filemd5("${var.public_path}/assets/${each.key}")
   lifecycle {
-    replace_triggered_by = [ terraform_data.content_version.output ]
-    ignore_changes = [ etag ]
+    replace_triggered_by = [terraform_data.content_version.output]
+    ignore_changes = [etag]
   }
 }

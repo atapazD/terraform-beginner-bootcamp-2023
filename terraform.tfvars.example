@@ -1,10 +1,10 @@
 terratowns_endpoint = "https://terratowns.cloud/api"
 fallout3 = {
-    fallout3_public_path = "/workspace/terraform-beginner-bootcamp-2023/public/fallout3"
+    public_path = "/workspace/terraform-beginner-bootcamp-2023/public/fallout3"
     content_version = 2
 }
 
 chocolateChip = {
-    chocolateChip_public_path = "/workspace/terraform-beginner-bootcamp-2023/public/chocolateChip_public_path"
+    public_path = "/workspace/terraform-beginner-bootcamp-2023/public/chocolateChip"
     content_version = 1
 }
