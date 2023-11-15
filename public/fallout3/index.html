@@ -1,13 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello Terraformers</title>
+    <title>Fallout 3</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
 </head>
 <body>
-    <h1>Fallout3 is the Best!</h1>
-    <img src="/assets/Fallout3DC.jpg">
-    <img src="/assets/LoneWanderer.jpg">
+    <div id="playButtonText">Click me to enter!</div>
+    <img id="playButton" src="assets/Vaultboy.png" alt="Play">
+
+    <div id="background-container" style="display: none;">
+        <audio id="audio">
+            <source src="assets/audio.mp3" type="audio/mpeg">
+        </audio>
+        <div id="floating-text-box">
+            <h1><img src=assets/falloutLogo.png ></h1>
+            <p>Fallout 3 is an immersive post-apocalyptic setting, set in a devastated Washington D.C., 
+                offers a unique and atmospheric experience. The game blends elements of survival, exploration, and role-playing seamlessly, allowing players to 
+                truly forge their own path in this desolate world. The choices and moral decisions players make have significant impacts on 
+                the storyline and the world around them, adding depth and replayability. 
+            </p>
+            <p>The game's rich narrative, combined with its open-world design, 
+                encourages exploration and discovery, with a multitude of quests and hidden secrets that reward curiosity. Additionally, the V.A.T.S. combat system adds a 
+                strategic layer to encounters, making combat both thrilling and tactical. All these elements combined make "Fallout 3" a compelling and memorable experience in the gaming world.
+            </p>
+        </div>
+    </div>
+
+    <script src="assets/script.js"></script>
 </body>
 </html>

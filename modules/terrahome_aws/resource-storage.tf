@@ -77,14 +77,40 @@ resource "terraform_data" "content_version" {
   input = var.content_version
 }
 
+# resource "aws_s3_object" "upload_assets" {
+#   for_each = fileset("${var.public_path}/assets","*.{jpg,png,gif,mp3,js,css}")
+#   bucket = aws_s3_bucket.website_bucket.bucket
+#   key    = "assets/${each.key}"
+#   source = "${var.public_path}/assets/${each.key}"
+#   etag = filemd5("${var.public_path}/assets/${each.key}")
+#   lifecycle {
+#     replace_triggered_by = [terraform_data.content_version.output]
+#     ignore_changes = [etag]
+#   }
+# }
+
+locals {
+  mime_types = {
+    "css" = "text/css",
+    "js"  = "application/javascript",
+    "mp3" = "audio/mpeg",
+    "jpg" = "image/jpeg",
+    "png" = "image/png",
+    "gif" = "image/gif"
+  }
+}
+
 resource "aws_s3_object" "upload_assets" {
-  for_each = fileset("${var.public_path}/assets","*.{jpg,png,gif}")
-  bucket = aws_s3_bucket.website_bucket.bucket
-  key    = "assets/${each.key}"
-  source = "${var.public_path}/assets/${each.key}"
-  etag = filemd5("${var.public_path}/assets/${each.key}")
+  for_each     = fileset("${var.public_path}/assets", "*.{jpg,png,gif,mp3,js,css}")
+  bucket       = aws_s3_bucket.website_bucket.bucket
+  key          = "assets/${each.key}"
+  source       = "${var.public_path}/assets/${each.key}"
+  etag         = filemd5("${var.public_path}/assets/${each.key}")
+
+  content_type = lookup(local.mime_types, regex(".*\\.(.+)$", each.key)[0], "application/octet-stream")
+
   lifecycle {
+    ignore_changes = [content_type, etag]
     replace_triggered_by = [terraform_data.content_version.output]
-    ignore_changes = [etag]
   }
 }
