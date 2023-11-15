@@ -32,7 +32,7 @@ resource "terratowns_home" "home" {
   DESCRIPTION
   domain_name = module.home_fallout3_hosting.domain_name
   #  domain_name= "3fafa3.cloudfront.net"
-  town            = "missingo"
+  town            = "gamers-grotto"
   content_version = var.fallout3.content_version
 }
 
