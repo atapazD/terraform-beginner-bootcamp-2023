@@ -1,3 +1,5 @@
+# Terraform Beginner Bootcamp 2023 - Week 3
+
 ## Playing Audio
 Modern Web browsers restric autoplaying audio and video to improve the user experience.
 Since this is an issue originally I had autoplayed audio at the start of the site which was throwing a console error.

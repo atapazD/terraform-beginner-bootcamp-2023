@@ -26,7 +26,7 @@
     max-width: 600px; /* Maximum width to ensure readability */
     margin: auto; /* Center the box */
     color: #39ff14; /* Neon green color */
-    text-align: center;
+    text-align:center;
     background-color: rgba(0, 0, 0, 0); /* Fully transparent background */
     padding: 20px;
     border-radius: 10px;

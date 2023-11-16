@@ -40,16 +40,16 @@ Its great for mock or development servers or for simple projects. You can create
 
 ## Terratowns Mock Server 
 
-### RUnning the web server
+### Running the web server
 
-We can run the webserer by executing the fllowing commands:
+We can run the webserver by executing the following commands:
 
 ```rb
 bundle install
 bundle exec ruby server.rb
 ```
 
-All of the cod efor our server is stored in the `server.rb` file.
+All of the code for our server is stored in the `server.rb` file.
 
 ## CRUD
 
@@ -58,3 +58,4 @@ Terraform Provider resources use CRUD.
 CRUD stands for Create, Read, Update, and Delete
 
 https://en.wikipedia.org/wiki/Create,_read,_update_and_delete
+
